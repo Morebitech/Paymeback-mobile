@@ -3,6 +3,7 @@ import 'package:paymeback/ui/finaldetailsPage/final_detail_page_view_model.dart'
 import 'package:paymeback/ui/widgets/detail_button.dart';
 import 'package:stacked/stacked.dart';
 
+// page for get the user name
 class FinalDetailPage extends StatelessWidget {
   const FinalDetailPage({Key? key}) : super(key: key);
 
