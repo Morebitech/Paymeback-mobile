@@ -4,10 +4,11 @@ import 'package:paymeback/ui/detailsPage/phone_number_registration_view.dart';
 import 'package:paymeback/ui/detailsconfirmationPage/cofirmation_view.dart';
 import 'package:paymeback/ui/finaldetailsPage/final_detail_page.dart';
 import 'package:paymeback/ui/home/home_view.dart';
+import 'package:paymeback/ui/selectlanguage/language_view.dart';
 import 'package:paymeback/ui/startup/startup_view.dart';
 
 const startupViewRoute = '/';
-const homeViewRoute = '/home';
+const homeView = '/home';
 const phoneRegistration = '/phoneRegistration';
 const language = '/language';
 const detailConfirmation = '/confirmation';
@@ -17,12 +18,12 @@ Route<dynamic> controller(RouteSettings settings) {
   switch (settings.name) {
     case startupViewRoute:
       return MaterialPageRoute(builder: (context) => StartupView());
-    case homeViewRoute:
+    case homeView:
       return MaterialPageRoute(builder: (context) => HomeView());
     case phoneRegistration:
       return MaterialPageRoute(builder: (context) => PhoneNumberRegistration());
-    // case language:
-    //   return MaterialPageRoute(builder: (context) => Languages());
+    case language:
+      return MaterialPageRoute(builder: (context) => Languages());
     case detailConfirmation:
       return MaterialPageRoute(builder: (context) => DetailConfirmation());
     case finalDetailPage:
