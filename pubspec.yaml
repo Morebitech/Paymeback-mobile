@@ -36,6 +36,10 @@ dependencies:
   pin_entry_text_field: ^0.1.4
   pin_code_fields: ^7.3.0
   flutter_pin_code_fields: ^1.1.0
+  flutter_verification_code: ^1.1.0
+  flutter_toggle_tab: ^1.1.7
+  intl_phone_number_input: ^0.7.0+2
+  datetime_picker_formfield: ^2.0.0
 
 dev_dependencies:
   flutter_test:
