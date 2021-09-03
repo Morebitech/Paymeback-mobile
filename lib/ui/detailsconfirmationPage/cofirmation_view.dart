@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
 import 'package:paymeback/ui/detailsconfirmationPage/confirmation_view_model.dart';
 import 'package:stacked/stacked.dart';
+import '../../app/app_route.dart' as route;
 
 FocusNode focusNode = FocusNode();
 
@@ -109,7 +110,10 @@ class DetailConfirmation extends StatelessWidget {
                                 ),
                               ),
                             ),
-                            onCompleted: (_) {},
+                            onCompleted: (_) {
+                              Navigator.popAndPushNamed(
+                                  context, route.finalDetailPage);
+                            },
                             onEditing: (_) {},
                           ),
                           Text(model.title3,

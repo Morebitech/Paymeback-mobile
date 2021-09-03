@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:paymeback/ui/detailsPage/phone_number_registration_view_model.dart';
-import 'package:paymeback/ui/widgets/detail_button.dart';
-
+import '../../app/app_route.dart' as route;
 import 'package:stacked/stacked.dart';
 
 class PhoneNumberRegistration extends StatelessWidget {
@@ -87,9 +86,15 @@ class PhoneNumberRegistration extends StatelessWidget {
                     Container(
                       width: double.infinity,
                       height: 50,
-                      child: Detailbutton(
-                        btnTitle: "Next",
-                      ),
+                      child: ElevatedButton.icon(
+                          style: ElevatedButton.styleFrom(
+                              primary: Colors.indigoAccent[200]),
+                          onPressed: () {
+                            Navigator.popAndPushNamed(
+                                context, route.detailConfirmation);
+                          },
+                          icon: Icon(Icons.arrow_right),
+                          label: Text("Next")),
                     )
                   ],
                 ),

@@ -5,9 +5,11 @@ import 'package:paymeback/ui/addcustomers/add_customer_view.dart';
 import 'package:paymeback/ui/detailsPage/phone_number_registration_view.dart';
 import 'package:paymeback/ui/detailsconfirmationPage/cofirmation_view.dart';
 import 'package:paymeback/ui/finaldetailsPage/final_detail_page.dart';
+import 'package:paymeback/ui/first_tracation/first_transaction_view.dart';
 import 'package:paymeback/ui/home/home_view.dart';
 import 'package:paymeback/ui/selectlanguage/language_view.dart';
 import 'package:paymeback/ui/startup/startup_view.dart';
+import 'package:paymeback/ui/wearsmute/wearsmute_view.dart';
 
 const startupViewRoute = '/';
 const homeView = '/home';
@@ -17,6 +19,8 @@ const detailConfirmation = '/confirmation';
 const finalDetailPage = '/finalDetail';
 const addCustomer = '/addCustomer';
 const registerCustomer = '/registerCustomer';
+const firstTransaction = '/firstTransaction';
+const wearsmute = '/wearsmute';
 Route<dynamic> controller(RouteSettings settings) {
   switch (settings.name) {
     case startupViewRoute:
@@ -35,6 +39,10 @@ Route<dynamic> controller(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => AddCustomer());
     case registerCustomer:
       return MaterialPageRoute(builder: (context) => CustomerRegister());
+    case firstTransaction:
+      return MaterialPageRoute(builder: (context) => FirstTransaction());
+    case wearsmute:
+      return MaterialPageRoute(builder: (context) => Wearsmute());
     default:
       throw ("this route name does not exit");
   }

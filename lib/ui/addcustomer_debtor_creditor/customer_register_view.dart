@@ -16,10 +16,11 @@ class CustomerRegister extends StatelessWidget {
       builder: (context, model, child) => Scaffold(
         appBar: AppBar(
           elevation: 0,
+          iconTheme: IconThemeData(color: Colors.black),
           backgroundColor: Colors.white,
           title: Center(
               child: Text(
-            "Add Customer",
+            model.lables.elementAt(0),
             style: TextStyle(color: Colors.black),
           )),
         ),
@@ -56,7 +57,7 @@ class CustomerRegister extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                Text(model.lables.elementAt(0)),
+                Text(model.lables.elementAt(1)),
                 SizedBox(
                   height: 20,
                 ),
@@ -69,7 +70,7 @@ class CustomerRegister extends StatelessWidget {
                         Radius.circular(10),
                       ),
                     ),
-                    labelText: model.lables.elementAt(1),
+                    labelText: model.lables.elementAt(2),
                   ),
                 ),
                 SizedBox(
@@ -84,7 +85,7 @@ class CustomerRegister extends StatelessWidget {
                         Radius.circular(10),
                       ),
                     ),
-                    labelText: model.lables.elementAt(2),
+                    labelText: model.lables.elementAt(3),
                   ),
                 ),
                 SizedBox(
@@ -99,7 +100,7 @@ class CustomerRegister extends StatelessWidget {
                         Radius.circular(10),
                       ),
                     ),
-                    labelText: model.lables.elementAt(3),
+                    labelText: model.lables.elementAt(4),
                   ),
                 ),
                 SizedBox(
@@ -115,12 +116,12 @@ class CustomerRegister extends StatelessWidget {
                   child: DateTimeField(
                     format: DateFormat("yyyy-MM-dd"),
                     decoration: InputDecoration(
-                      hintText: model.lables.elementAt(4),
+                      hintText: model.lables.elementAt(5),
                       icon: Icon(Icons.calendar_today_outlined),
                     ),
                     onShowPicker: (context, currentValue) {
                       return showDatePicker(
-                          helpText: model.lables.elementAt(4),
+                          helpText: model.lables.elementAt(5),
                           context: context,
                           firstDate: DateTime(1900),
                           initialDate: currentValue ?? DateTime.now(),
@@ -148,7 +149,7 @@ class CustomerRegister extends StatelessWidget {
                       disabledBorder: InputBorder.none,
                       contentPadding: EdgeInsets.only(
                           left: 15, bottom: 11, top: 11, right: 15),
-                      hintText: model.lables.elementAt(5),
+                      hintText: model.lables.elementAt(6),
                     ),
                   ),
                 ),
@@ -162,7 +163,7 @@ class CustomerRegister extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () {},
                     child: Text(
-                      model.lables.elementAt(6),
+                      model.lables.elementAt(7),
                     ),
                   ),
                 )

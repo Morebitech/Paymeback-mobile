@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:paymeback/ui/finaldetailsPage/final_detail_page_view_model.dart';
-import 'package:paymeback/ui/widgets/detail_button.dart';
+import '../../app/app_route.dart' as route;
 import 'package:stacked/stacked.dart';
 
 // page for get the user name
@@ -75,7 +75,15 @@ class FinalDetailPage extends StatelessWidget {
                         Container(
                           width: MediaQuery.of(context).size.width * 75 / 100,
                           height: 50,
-                          child: Detailbutton(btnTitle: model.title3),
+                          child: ElevatedButton.icon(
+                              style: ElevatedButton.styleFrom(
+                                  primary: Colors.indigoAccent[200]),
+                              onPressed: () {
+                                Navigator.pushReplacementNamed(
+                                    context, route.homeView);
+                              },
+                              icon: Icon(Icons.arrow_right),
+                              label: Text(model.title3)),
                         ),
                       ],
                     )

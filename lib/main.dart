@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.indigo,
       ),
       onGenerateRoute: route.controller,
-      initialRoute: route.registerCustomer,
+      initialRoute: route.wearsmute,
     );
   }
 }

@@ -6,6 +6,7 @@ class CustomerRegisterViewModel extends BaseViewModel {
     'Creditor',
   ];
   List<String> _usedLables = [
+    'Add Customer',
     'Customer Details',
     'Enter Name',
     'Mobile Number',

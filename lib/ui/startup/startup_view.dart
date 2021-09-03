@@ -19,7 +19,7 @@ class StartupView extends StatelessWidget {
     return ViewModelBuilder<StartupViewModel>.reactive(
       builder: (context, model, child) => Scaffold(
         body: GestureDetector(
-          onTap: () => Navigator.pushNamed(context, route.homeView),
+          onTap: () => Navigator.pushReplacementNamed(context, route.language),
           child: Container(
             width: double.infinity,
             height: double.infinity,
