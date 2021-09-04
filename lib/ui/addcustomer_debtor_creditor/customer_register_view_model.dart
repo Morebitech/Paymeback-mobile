@@ -5,7 +5,7 @@ class CustomerRegisterViewModel extends BaseViewModel {
     'Debtor',
     'Creditor',
   ];
-  List<String> _usedLables = [
+  List<String> _usedLabels = [
     'Add Customer',
     'Customer Details',
     'Enter Name',
@@ -16,7 +16,7 @@ class CustomerRegisterViewModel extends BaseViewModel {
     'Next',
   ];
   int _index = 0;
-  List<String> get lables => _usedLables;
+  List<String> get labels => _usedLabels;
   List<String> get toggleBarLables => _toggleBarLables;
   int get index => _index;
 
