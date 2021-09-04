@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:paymeback/ui/wearsmute/wearsmute_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 
@@ -55,7 +56,49 @@ class CreditorsTab extends StatelessWidget {
             Container(
               width: MediaQuery.of(context).size.width * 90 / 100,
               height: MediaQuery.of(context).size.width * 90 / 100,
-              child: null,
+              child: ListView.builder(
+                itemBuilder: (ctx, index) {
+                  return Container(
+                    padding: EdgeInsets.symmetric(vertical: 15),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        CircleAvatar(
+                          radius: 35,
+                          foregroundImage:
+                              AssetImage(model.creditors[index].imageUrl),
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              model.creditors[index].name,
+                              style:
+                                  TextStyle(fontSize: 17, color: Colors.black),
+                            ),
+                            Text(
+                                "Due Date: ${DateFormat("dd-MM-yyyy").format(model.creditors[index].dueDate)}"),
+                            Text("${model.creditors[index].dayLeft} days left"),
+                          ],
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Text("${model.creditors[index].amount} Ksh"),
+                            Text("Not paid"),
+                          ],
+                        ),
+                      ],
+                    ),
+                  );
+                },
+                itemCount: model.creditors.length,
+              ),
             ),
             Container(
               margin: EdgeInsets.symmetric(vertical: 10),

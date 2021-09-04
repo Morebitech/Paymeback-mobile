@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:paymeback/ui/wearsmute/creditors_tab.dart';
+import 'package:paymeback/ui/wearsmute/tabs/all_customers_tab.dart';
+import 'package:paymeback/ui/wearsmute/tabs/creditors_tab.dart';
+import 'package:paymeback/ui/wearsmute/tabs/debtors_tab.dart';
 import 'package:paymeback/ui/wearsmute/wearsmute_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 
@@ -27,9 +29,9 @@ class Wearsmute extends StatelessWidget {
           ),
           body: TabBarView(
             children: [
-              Container(height: 30, child: Text(model.labels.elementAt(1))),
+              AllCustomersTab(),
               CreditorsTab(),
-              Container(height: 30, child: Text(model.labels.elementAt(3))),
+              DebtorsTab(),
             ],
           ),
           bottomNavigationBar: BottomNavigationBar(
