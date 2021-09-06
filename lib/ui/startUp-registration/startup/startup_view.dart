@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:paymeback/ui/startup/startup_view_model.dart';
+import 'package:paymeback/ui/startUp-registration/startup/startup_view_model.dart';
 import 'package:stacked/stacked.dart';
-import '../../app/app_route.dart' as route;
+import '../../../app/app_route.dart' as route;
 
 class StartupView extends StatelessWidget {
   Widget text(String title) {

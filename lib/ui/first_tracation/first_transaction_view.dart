@@ -50,72 +50,75 @@ class FirstTransaction extends StatelessWidget {
             ),
           ),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(""),
-            Column(
-              children: [
-                Image(image: AssetImage(model.lockImage)),
-                SizedBox(
-                  height: 10,
-                ),
-                Text(model.text1),
-                Text("you and ${model.name} can view this"),
-                Text(model.text2),
-              ],
-            ),
-            Column(
-              children: [
-                Container(
-                  width: double.infinity,
-                  color: Colors.blueGrey[200],
-                  height: 50,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text("add first transaction of ${model.name}"),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Icon(Icons.arrow_downward)
-                    ],
+        body: Container(
+          height: MediaQuery.of(context).size.height,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(""),
+              Column(
+                children: [
+                  Image(image: AssetImage(model.lockImage)),
+                  SizedBox(
+                    height: 10,
                   ),
-                ),
-                Container(
-                  padding: EdgeInsets.all(8),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        width: MediaQuery.of(context).size.width * 45 / 100,
-                        height: 50,
-                        child: ElevatedButton(
-                          onPressed: () {},
-                          style:
-                              ElevatedButton.styleFrom(primary: Colors.green),
-                          child: Text(model.text3),
+                  Text(model.text1),
+                  Text("you and ${model.name} can view this"),
+                  Text(model.text2),
+                ],
+              ),
+              Column(
+                children: [
+                  Container(
+                    width: double.infinity,
+                    color: Colors.blueGrey[200],
+                    height: 50,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("add first transaction of ${model.name}"),
+                        SizedBox(
+                          width: 20,
                         ),
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      Container(
-                        height: 50,
-                        width: MediaQuery.of(context).size.width * 45 / 100,
-                        child: ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                              primary: Colors.orange[300]),
-                          child: Text(model.text4),
-                        ),
-                      ),
-                    ],
+                        Icon(Icons.arrow_downward)
+                      ],
+                    ),
                   ),
-                )
-              ],
-            ),
-          ],
+                  Container(
+                    padding: EdgeInsets.all(8),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width * 45 / 100,
+                          height: 50,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            style:
+                                ElevatedButton.styleFrom(primary: Colors.green),
+                            child: Text(model.text3),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 20,
+                        ),
+                        Container(
+                          height: 50,
+                          width: MediaQuery.of(context).size.width * 45 / 100,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                                primary: Colors.orange[300]),
+                            child: Text(model.text4),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );

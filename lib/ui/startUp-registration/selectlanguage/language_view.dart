@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:paymeback/ui/selectlanguage/language_view_model.dart';
+import 'package:paymeback/ui/startUp-registration/selectlanguage/language_view_model.dart';
 import 'package:stacked/stacked.dart';
-import '../../app/app_route.dart' as route;
+import '../../../app/app_route.dart' as route;
 
 class Languages extends StatelessWidget {
   const Languages({Key? key}) : super(key: key);

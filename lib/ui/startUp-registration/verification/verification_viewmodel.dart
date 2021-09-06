@@ -1,6 +1,6 @@
 import 'package:stacked/stacked.dart';
 
-class DetailConfirmationModel extends BaseViewModel {
+class VerificationViewModel extends BaseViewModel {
   String _text1 = 'PASTE FROM SMS';
   String _text2 = '0349';
   String _text3 = 'Please, enter 4-digit code we sent on';

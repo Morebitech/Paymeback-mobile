@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:paymeback/ui/wearsmute/wearsmute_viewmodel.dart';
 import 'package:stacked/stacked.dart';
+
+import '../home_viewmodel.dart';
 
 class DebtorsTab extends StatelessWidget {
   const DebtorsTab({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ViewModelBuilder<WearsmuteViewModel>.reactive(
-      viewModelBuilder: () => WearsmuteViewModel(),
+    return ViewModelBuilder<HomeViewModel>.reactive(
+      viewModelBuilder: () => HomeViewModel(),
       builder: (context, model, child) => SingleChildScrollView(
         child: Column(
           children: [

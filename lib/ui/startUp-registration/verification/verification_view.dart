@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
-import 'package:paymeback/ui/detailsconfirmationPage/confirmation_view_model.dart';
+import 'package:paymeback/ui/startUp-registration/verification/verification_viewmodel.dart';
+
 import 'package:stacked/stacked.dart';
-import '../../app/app_route.dart' as route;
+import '../../../app/app_route.dart' as route;
 
 FocusNode focusNode = FocusNode();
 
-class DetailConfirmation extends StatelessWidget {
-  const DetailConfirmation({Key? key}) : super(key: key);
+class Verification extends StatelessWidget {
+  const Verification({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ViewModelBuilder<DetailConfirmationModel>.reactive(
-      viewModelBuilder: () => DetailConfirmationModel(),
+    return ViewModelBuilder<VerificationViewModel>.reactive(
+      viewModelBuilder: () => VerificationViewModel(),
       builder: (context, model, child) => Scaffold(
         body: Stack(
           children: [
