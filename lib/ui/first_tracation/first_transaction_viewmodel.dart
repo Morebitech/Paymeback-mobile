@@ -1,4 +1,3 @@
-import 'package:flutter/widgets.dart';
 import 'package:stacked/stacked.dart';
 
 class FirstTransactionViewModel extends BaseViewModel {
