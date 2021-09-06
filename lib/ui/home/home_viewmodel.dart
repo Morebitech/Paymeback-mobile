@@ -46,7 +46,7 @@ class HomeViewModel extends BaseViewModel {
     "Search for a customer",
     "Add a new Customer",
   ];
-  List<ContactModel> _creditors = [
+  List<ContactModel> _allCustomerList = [
     ContactModel(
         id: 1,
         amount: 700,
@@ -72,7 +72,7 @@ class HomeViewModel extends BaseViewModel {
   int get indexBottom => _indexBottom;
 
   List<String> get labels => _labels;
-  List<ContactModel> get creditors => _creditors;
+  List<ContactModel> get customersList => _allCustomerList;
   List<String> get allCustomersLabels => _allCustomersLabels;
   List<String> get creditorLabels => _creditorsLabels;
   List<String> get debtorsLabels => _debtorsLabels;
