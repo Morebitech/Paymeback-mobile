@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:paymeback/ui/addcustomers/add_customer_view.dart';
+
+import 'package:paymeback/ui/empty-list-screen/empty_list.dart';
 import 'package:stacked/stacked.dart';
 
 import '../home_viewmodel.dart';
@@ -14,7 +15,8 @@ class DebtorsTab extends StatelessWidget {
       viewModelBuilder: () => HomeViewModel(),
       builder: (context, model, child) => SingleChildScrollView(
         child: model.customersList.isEmpty
-            ? AddCustomer()
+            ? Container(
+                height: MediaQuery.of(context).size.height, child: EmptyList())
             : Column(
                 children: [
                   Card(

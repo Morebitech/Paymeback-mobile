@@ -1,6 +1,6 @@
 import 'package:stacked/stacked.dart';
 
-class AddCustomerViewModel extends BaseViewModel {
+class EmptyListViewModel extends BaseViewModel {
   String _title = 'it\'s all about the customers right?';
   String get title => _title;
   String _image = 'assets/images/Group.png';

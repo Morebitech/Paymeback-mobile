@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:paymeback/ui/addcustomer_debtor_creditor/customer_register_view.dart';
+import 'package:paymeback/ui/add-customer-manually/add_customer_manually.dart';
 import 'package:paymeback/ui/first_tracation/first_transaction_view.dart';
 import 'package:paymeback/ui/home/home_view.dart';
 import 'package:paymeback/ui/startUp-registration/finaldetailsPage/final_detail_page.dart';
@@ -15,7 +15,7 @@ const phoneRegistration = '/phoneRegistration';
 const language = '/language';
 const verification = '/confirmation';
 const finalDetailPage = '/finalDetail';
-const registerCustomer = '/registerCustomer';
+const addCustomerManually = '/registerCustomer';
 const firstTransaction = '/firstTransaction';
 const wearsmute = '/wearsmute';
 Route<dynamic> controller(RouteSettings settings) {
@@ -32,8 +32,8 @@ Route<dynamic> controller(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => Verification());
     case finalDetailPage:
       return MaterialPageRoute(builder: (context) => FinalDetailPage());
-    case registerCustomer:
-      return MaterialPageRoute(builder: (context) => CustomerRegister());
+    case addCustomerManually:
+      return MaterialPageRoute(builder: (context) => AddCustomerManually());
     case firstTransaction:
       return MaterialPageRoute(builder: (context) => FirstTransaction());
     case wearsmute:

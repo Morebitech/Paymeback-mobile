@@ -47,20 +47,20 @@ class HomeViewModel extends BaseViewModel {
     "Add a new Customer",
   ];
   List<ContactModel> _allCustomerList = [
-    ContactModel(
-        id: 1,
-        amount: 700,
-        dayLeft: 2,
-        dueDate: DateTime.now(),
-        imageUrl: "assets/images/image.png",
-        name: "Elie Bamunoba"),
-    ContactModel(
-        id: 2,
-        amount: 900,
-        dayLeft: 3,
-        dueDate: DateTime.now(),
-        imageUrl: "assets/images/background.png",
-        name: "Isaac Bamunoba"),
+    // ContactModel(
+    //     id: 1,
+    //     amount: 700,
+    //     dayLeft: 2,
+    //     dueDate: DateTime.now(),
+    //     imageUrl: "assets/images/image.png",
+    //     name: "Elie Bamunoba"),
+    // ContactModel(
+    //     id: 2,
+    //     amount: 900,
+    //     dayLeft: 3,
+    //     dueDate: DateTime.now(),
+    //     imageUrl: "assets/images/background.png",
+    //     name: "Isaac Bamunoba"),
   ];
 
   int _indexBottom = 0;

@@ -1,6 +1,6 @@
 import 'package:stacked/stacked.dart';
 
-class CustomerRegisterViewModel extends BaseViewModel {
+class AddCustomerManuallyViewModel extends BaseViewModel {
   List<String> _toggleBarLables = [
     'Debtor',
     'Creditor',

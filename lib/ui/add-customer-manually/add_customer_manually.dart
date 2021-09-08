@@ -3,16 +3,16 @@ import 'package:flutter_toggle_tab/flutter_toggle_tab.dart';
 
 import 'package:intl/intl.dart';
 import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
-import 'package:paymeback/ui/addcustomer_debtor_creditor/customer_register_view_model.dart';
+import 'package:paymeback/ui/add-customer-manually/add_customer_manually_viewmodel.dart';
 import 'package:stacked/stacked.dart';
 
-class CustomerRegister extends StatelessWidget {
-  const CustomerRegister({Key? key}) : super(key: key);
+class AddCustomerManually extends StatelessWidget {
+  const AddCustomerManually({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return ViewModelBuilder<CustomerRegisterViewModel>.reactive(
-      viewModelBuilder: () => CustomerRegisterViewModel(),
+    return ViewModelBuilder<AddCustomerManuallyViewModel>.reactive(
+      viewModelBuilder: () => AddCustomerManuallyViewModel(),
       builder: (context, model, child) => Scaffold(
         appBar: AppBar(
           elevation: 0,
