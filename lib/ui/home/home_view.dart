@@ -1,63 +1,68 @@
 import 'package:flutter/material.dart';
-import 'package:paymeback/ui/home/home_view_model.dart';
+import 'package:paymeback/ui/home/tabs/all_customers_tab.dart';
+import 'package:paymeback/ui/home/tabs/creditors_tab.dart';
+import 'package:paymeback/ui/home/tabs/debtors_tab.dart';
 import 'package:stacked/stacked.dart';
+import 'home_viewmodel.dart';
 
 class HomeView extends StatelessWidget {
+  const HomeView({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ViewModelBuilder<HomeViewModel>.reactive(
-      builder: (context, model, child) => Scaffold(
-        body: Container(
-          height: MediaQuery.of(context).size.height,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
+      viewModelBuilder: () => HomeViewModel(),
+      builder: (context, model, child) => DefaultTabController(
+        length: 3,
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text(model.labels.elementAt(0)),
+            bottom: TabBar(
+              indicatorColor: Colors.indigo,
+              indicatorSize: TabBarIndicatorSize.label,
+              tabs: [
+                Container(height: 30, child: Text(model.labels.elementAt(1))),
+                Container(height: 30, child: Text(model.labels.elementAt(2))),
+                Container(height: 30, child: Text(model.labels.elementAt(3))),
+              ],
+            ),
+          ),
+          body: TabBarView(
             children: [
-              Container(
-                height: MediaQuery.of(context).size.height * 80 / 100,
-                child: Center(
-                  child: Text(model.btnTitle),
-                ),
+              AllCustomersTab(),
+              CreditorsTab(),
+              DebtorsTab(),
+            ],
+          ),
+          bottomNavigationBar: BottomNavigationBar(
+            onTap: (index) {
+              model.updateBottomIndex(index);
+            },
+            backgroundColor: Colors.blue,
+            unselectedItemColor: Colors.black,
+            selectedItemColor: Colors.indigo,
+            currentIndex: model.indexBottom,
+            type: BottomNavigationBarType.shifting,
+            items: [
+              BottomNavigationBarItem(
+                backgroundColor: Colors.white,
+                icon: Icon(Icons.home),
+                label: model.labels.elementAt(4),
               ),
-              Container(
-                width: double.infinity,
-                padding: EdgeInsets.symmetric(horizontal: 20),
-                child: ElevatedButton.icon(
-                    style: ElevatedButton.styleFrom(
-                        primary: Colors.indigoAccent[200]),
-                    onPressed: () {},
-                    icon: Icon(Icons.arrow_right),
-                    label: Text(model.btnTitle)),
+              BottomNavigationBarItem(
+                backgroundColor: Colors.white,
+                icon: Icon(Icons.business),
+                label: model.labels.elementAt(5),
+              ),
+              BottomNavigationBarItem(
+                backgroundColor: Colors.white,
+                icon: Icon(Icons.person_outline_outlined),
+                label: model.labels.elementAt(6),
               ),
             ],
           ),
         ),
-        bottomNavigationBar: BottomNavigationBar(
-          onTap: (_) {},
-          backgroundColor: Colors.blue,
-          unselectedItemColor: Colors.black,
-          selectedItemColor: Colors.white,
-          currentIndex: 1,
-          type: BottomNavigationBarType.shifting,
-          items: [
-            BottomNavigationBarItem(
-              backgroundColor: Colors.blue,
-              icon: Icon(Icons.home),
-              label: "Home",
-            ),
-            BottomNavigationBarItem(
-              backgroundColor: Colors.blue,
-              icon: Icon(Icons.grading_sharp),
-              label: "Marketing",
-            ),
-            BottomNavigationBarItem(
-              backgroundColor: Colors.blue,
-              icon: Icon(Icons.person),
-              label: "Your Company",
-            ),
-          ],
-        ),
       ),
-      viewModelBuilder: () => HomeViewModel(),
     );
   }
 }
