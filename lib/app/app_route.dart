@@ -5,6 +5,7 @@ import 'package:paymeback/ui/add-customer-from-contactbook/finilization-contactb
 import 'package:paymeback/ui/add-customer-manually/add_customer_manually.dart';
 import 'package:paymeback/ui/first_tracation/first_transaction_view.dart';
 import 'package:paymeback/ui/home/home_view.dart';
+import 'package:paymeback/ui/notifications/notification.dart';
 import 'package:paymeback/ui/startUp-registration/finaldetailsPage/final_detail_page.dart';
 import 'package:paymeback/ui/startUp-registration/selectlanguage/language_view.dart';
 import 'package:paymeback/ui/startUp-registration/startup/startup_view.dart';
@@ -13,6 +14,7 @@ import 'package:paymeback/ui/startUp-registration/verification/verification_view
 
 const startupViewRoute = '/';
 const homeView = '/home';
+const notification = '/notification';
 const phoneRegistration = '/phoneRegistration';
 const language = '/language';
 const verification = '/confirmation';
@@ -21,7 +23,6 @@ const addCustomerManually = '/AddCustomerManually';
 const addCustomerFromContactBook = '/AddCustomerFromContactBook';
 const contactBookFinilization = '/contactBookFinilization';
 const firstTransaction = '/firstTransaction';
-const wearsmute = '/wearsmute';
 
 Route<dynamic> controller(RouteSettings settings) {
   switch (settings.name) {
@@ -46,8 +47,8 @@ Route<dynamic> controller(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => ContactBookFinilization());
     case firstTransaction:
       return MaterialPageRoute(builder: (context) => FirstTransaction());
-    case wearsmute:
-      return MaterialPageRoute(builder: (context) => HomeView());
+    case notification:
+      return MaterialPageRoute(builder: (context) => NotificationView());
     default:
       throw ("this route name does not exit");
   }
