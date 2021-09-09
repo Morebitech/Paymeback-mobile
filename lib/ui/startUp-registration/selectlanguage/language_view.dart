@@ -24,7 +24,7 @@ class Languages extends StatelessWidget {
                   ),
                   child: GestureDetector(
                     onTap: () => Navigator.popAndPushNamed(
-                        context, route.phoneRegistration),
+                        context, route.phoneNumberRegistration),
                     child: Container(
                       padding: EdgeInsets.all(5),
                       child: ListTile(

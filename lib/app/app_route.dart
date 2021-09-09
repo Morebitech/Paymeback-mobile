@@ -3,26 +3,26 @@ import 'package:flutter/material.dart';
 import 'package:paymeback/ui/add-customer-from-contactbook/contact-book/add_customer_from_contactbook.dart';
 import 'package:paymeback/ui/add-customer-from-contactbook/finilization-contactbook/finilization_contactbook.dart.dart';
 import 'package:paymeback/ui/add-customer-manually/add_customer_manually.dart';
-import 'package:paymeback/ui/first_tracation/first_transaction_view.dart';
 import 'package:paymeback/ui/home/home_view.dart';
 import 'package:paymeback/ui/notifications/notification.dart';
-import 'package:paymeback/ui/startUp-registration/finaldetailsPage/final_detail_page.dart';
+import 'package:paymeback/ui/startUp-registration/phone-number-verification/phone_number_verification.dart';
 import 'package:paymeback/ui/startUp-registration/selectlanguage/language_view.dart';
 import 'package:paymeback/ui/startUp-registration/startup/startup_view.dart';
-import 'package:paymeback/ui/startUp-registration/user-registration/phone_number_registration_view.dart';
-import 'package:paymeback/ui/startUp-registration/verification/verification_view.dart';
+import 'package:paymeback/ui/startUp-registration/user-name-registration/user_name_registration.dart';
+import 'package:paymeback/ui/startUp-registration/user-phone-number-registration/phone_number_registration_view.dart';
+import 'package:paymeback/ui/transaction/transaction_view.dart';
 
 const startupViewRoute = '/';
 const homeView = '/home';
 const notification = '/notification';
-const phoneRegistration = '/phoneRegistration';
+const phoneNumberRegistration = '/phoneNumberRegistration';
 const language = '/language';
-const verification = '/confirmation';
-const finalDetailPage = '/finalDetail';
+const phoneNumberVerification = '/phoneNumberVerification';
+const userNameRegistraction = '/userNameRegistraction';
 const addCustomerManually = '/AddCustomerManually';
 const addCustomerFromContactBook = '/AddCustomerFromContactBook';
 const contactBookFinilization = '/contactBookFinilization';
-const firstTransaction = '/firstTransaction';
+const transaction = '/transaction';
 
 Route<dynamic> controller(RouteSettings settings) {
   switch (settings.name) {
@@ -30,14 +30,14 @@ Route<dynamic> controller(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => StartupView());
     case homeView:
       return MaterialPageRoute(builder: (context) => HomeView());
-    case phoneRegistration:
+    case phoneNumberRegistration:
       return MaterialPageRoute(builder: (context) => PhoneNumberRegistration());
     case language:
       return MaterialPageRoute(builder: (context) => Languages());
-    case verification:
-      return MaterialPageRoute(builder: (context) => Verification());
-    case finalDetailPage:
-      return MaterialPageRoute(builder: (context) => FinalDetailPage());
+    case phoneNumberVerification:
+      return MaterialPageRoute(builder: (context) => PhoneNumberVerification());
+    case userNameRegistraction:
+      return MaterialPageRoute(builder: (context) => UserNameRegistraction());
     case addCustomerManually:
       return MaterialPageRoute(builder: (context) => AddCustomerManually());
     case addCustomerFromContactBook:
@@ -45,13 +45,11 @@ Route<dynamic> controller(RouteSettings settings) {
           builder: (context) => AddContactFromContactBook());
     case contactBookFinilization:
       return MaterialPageRoute(builder: (context) => ContactBookFinilization());
-    case firstTransaction:
-      return MaterialPageRoute(builder: (context) => FirstTransaction());
+    case transaction:
+      return MaterialPageRoute(builder: (context) => Transaction());
     case notification:
       return MaterialPageRoute(builder: (context) => NotificationView());
     default:
       throw ("this route name does not exit");
   }
 }
-
-class DetailConfirmation {}
