@@ -1,6 +1,6 @@
 import 'package:stacked/stacked.dart';
 
-class FirstTransactionViewModel extends BaseViewModel {
+class TransactionViewModel extends BaseViewModel {
   String _name = "Elie";
   String _phoneNumber = "098765432";
   String _profileImage = "assets/images/image.png";
