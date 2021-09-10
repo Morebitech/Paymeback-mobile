@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.indigo,
       ),
       onGenerateRoute: route.controller,
-      initialRoute: route.homeView,
+      initialRoute: route.startupViewRoute,
     );
   }
 }

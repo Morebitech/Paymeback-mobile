@@ -1,3 +1,6 @@
+import 'package:paymeback/ui/home/home_view.dart';
+import 'package:paymeback/ui/profile/profile.dart';
+import 'package:paymeback/ui/transaction/transaction_view.dart';
 import 'package:stacked/stacked.dart';
 
 class ContactModel {
@@ -26,26 +29,30 @@ class HomeViewModel extends BaseViewModel {
     "Debtors",
     "Home",
     "My Transactions",
-    "My Company",
+    "My Profile",
     "You are owing Customers"
   ];
+
   List<String> _creditorsLabels = [
     "You are owing Customers",
     "Ksh",
     "Search for a Creditor",
     "Add a new Creditor",
   ];
+
   List<String> _debtorsLabels = [
     "Customers are owing you",
     "Ksh",
     "Search for a debtor",
     "Add a new debtor",
   ];
+
   List<String> _allCustomersLabels = [
     "Customer list",
     "Search for a customer",
     "Add a new Customer",
   ];
+
   List<ContactModel> _allCustomerList = [
     ContactModel(
         id: 1,
@@ -62,8 +69,14 @@ class HomeViewModel extends BaseViewModel {
         imageUrl: "assets/images/background.png",
         name: "Isaac Bamunoba"),
   ];
+  final List screens = [
+    HomeView(),
+    Transaction(),
+    Profile(),
+  ];
 
   int _indexBottom = 0;
+
   void updateBottomIndex(int index) {
     _indexBottom = index;
     notifyListeners();
