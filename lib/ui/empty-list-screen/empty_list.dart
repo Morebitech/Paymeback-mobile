@@ -38,7 +38,8 @@ class EmptyList extends StatelessWidget {
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                           primary: Colors.indigoAccent[200]),
-                      onPressed: () {},
+                      onPressed: () => Navigator.pushNamed(
+                          context, route.addCustomerFromContactBook),
                       child: Text(model.btnTitle),
                     ),
                   ),
