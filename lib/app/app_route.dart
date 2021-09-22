@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:paymeback/ui/add-customer-from-contactbook/contact-book/add_customer_from_contactbook.dart';
 import 'package:paymeback/ui/add-customer-from-contactbook/finilization-contactbook/finilization_contactbook.dart.dart';
 import 'package:paymeback/ui/add-customer-manually/add_customer_manually.dart';
+import 'package:paymeback/ui/contact-us/contact_us.dart';
 import 'package:paymeback/ui/home/home_tabs.dart';
 import 'package:paymeback/ui/home/home_view.dart';
 import 'package:paymeback/ui/notifications/notification.dart';
+import 'package:paymeback/ui/settings/settings.dart';
 import 'package:paymeback/ui/startUp-registration/phone-number-verification/phone_number_verification.dart';
 import 'package:paymeback/ui/startUp-registration/selectlanguage/language_view.dart';
 import 'package:paymeback/ui/startUp-registration/startup/startup_view.dart';
@@ -24,7 +26,9 @@ const userNameRegistraction = '/userNameRegistraction';
 const addCustomerManually = '/AddCustomerManually';
 const addCustomerFromContactBook = '/AddCustomerFromContactBook';
 const contactBookFinilization = '/contactBookFinilization';
+const setting = '/settings';
 const transaction = '/transaction';
+const contactUs = '/contactUs';
 
 Route<dynamic> controller(RouteSettings settings) {
   switch (settings.name) {
@@ -53,6 +57,10 @@ Route<dynamic> controller(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => Transaction());
     case notification:
       return MaterialPageRoute(builder: (context) => NotificationView());
+    case setting:
+      return MaterialPageRoute(builder: (context) => Settings());
+    case contactUs:
+      return MaterialPageRoute(builder: (context) => ContactUs());
     default:
       throw ("this route name does not exit");
   }
