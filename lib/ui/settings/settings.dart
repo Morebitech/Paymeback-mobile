@@ -47,7 +47,7 @@ class Settings extends StatelessWidget {
             ),
             divider(),
             ListTile(
-              title: Text("About us"),
+              title: Text("About Us"),
               trailing: Icon(Icons.arrow_forward_ios_sharp),
             ),
             divider(),
