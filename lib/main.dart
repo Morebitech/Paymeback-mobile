@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
               brightness: _brightness,
             ),
             onGenerateRoute: route.controller,
-            initialRoute: route.homeTabs,
+            initialRoute: route.startupViewRoute,
           );
         });
   }
