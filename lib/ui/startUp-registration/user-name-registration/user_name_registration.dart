@@ -80,7 +80,7 @@ class UserNameRegistraction extends StatelessWidget {
                                 primary: Colors.indigoAccent[200]),
                             onPressed: () {
                               Navigator.pushReplacementNamed(
-                                  context, route.homeView);
+                                  context, route.homeTabs);
                             },
                             icon: Icon(Icons.arrow_right),
                             label: Text(model.title3),

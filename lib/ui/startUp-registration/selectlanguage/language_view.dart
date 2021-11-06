@@ -10,7 +10,7 @@ class Languages extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder<LanguageViewModel>.reactive(
       viewModelBuilder: () => LanguageViewModel(),
-      builder: (context, model, Child) => Scaffold(
+      builder: (context, model, child) => Scaffold(
         body: Container(
           child: ListView.builder(
             itemBuilder: (ctx, index) {

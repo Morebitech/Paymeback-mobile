@@ -15,11 +15,12 @@ class PhoneNumberRegistration extends StatelessWidget {
 
   Widget card(String imagePath) {
     return Card(
-        elevation: 5,
-        child: Padding(
-          padding: EdgeInsets.all(10),
-          child: Image.asset(imagePath),
-        ));
+      elevation: 5,
+      child: Padding(
+        padding: EdgeInsets.all(10),
+        child: Image.asset(imagePath),
+      ),
+    );
   }
 
   @override
