@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:paymeback/constant/popup_menu.dart';
 import 'package:paymeback/ui/home/tabs/all_customers_tab.dart';
 import 'package:paymeback/ui/home/tabs/creditors_tab.dart';
 import 'package:paymeback/ui/home/tabs/debtors_tab.dart';
@@ -17,6 +18,9 @@ class HomeView extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             title: Text(model.labels.elementAt(0)),
+            actions: [
+              PopupMenu(),
+            ],
             bottom: TabBar(
               indicatorColor: Colors.indigo,
               indicatorSize: TabBarIndicatorSize.label,

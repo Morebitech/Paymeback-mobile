@@ -68,7 +68,8 @@ class AllCustomersTab extends StatelessWidget {
                                   Text(
                                     model.customersList[index].name,
                                     style: TextStyle(
-                                        fontSize: 17, color: Colors.black),
+                                      fontSize: 17,
+                                    ),
                                   ),
                                   Text(
                                       "Due Date: ${DateFormat("dd-MM-yyyy").format(model.customersList[index].dueDate)}"),
